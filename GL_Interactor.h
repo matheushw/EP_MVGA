@@ -89,7 +89,7 @@ void Init_Interactor()//TPrint * myTPrint)
 
 	glutMouseFunc(subMouse);
 
- glutPostRedisplay();
+	glutPostRedisplay();
   
 // Interactor->AddTPrint(myTPrint);
  
@@ -211,3 +211,15 @@ void TriangleColor(Coord coord1, int index1, Coord coord2, int index2, Coord coo
 
 	 glEnd();
 }
+
+
+
+/*
+
+x = x1 * a1 + x2 * a2 + x3 * a3
+y = y1 * a1 + y2 * a2 + y3 * a3 
+
+a1+a2+a3 = 1
+a1+a2+a3 = 
+
+*/

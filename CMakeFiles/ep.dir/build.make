@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matheus/Documents/mvga
+CMAKE_SOURCE_DIR = /home/matheus/EDUARRDO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matheus/Documents/mvga
+CMAKE_BINARY_DIR = /home/matheus/EDUARRDO
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ep.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ep.dir/flags.make
 
 CMakeFiles/ep.dir/main.cpp.o: CMakeFiles/ep.dir/flags.make
 CMakeFiles/ep.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus/Documents/mvga/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ep.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ep.dir/main.cpp.o -c /home/matheus/Documents/mvga/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus/EDUARRDO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ep.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ep.dir/main.cpp.o -c /home/matheus/EDUARRDO/main.cpp
 
 CMakeFiles/ep.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ep.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus/Documents/mvga/main.cpp > CMakeFiles/ep.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus/EDUARRDO/main.cpp > CMakeFiles/ep.dir/main.cpp.i
 
 CMakeFiles/ep.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ep.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus/Documents/mvga/main.cpp -o CMakeFiles/ep.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus/EDUARRDO/main.cpp -o CMakeFiles/ep.dir/main.cpp.s
 
 CMakeFiles/ep.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ep.dir/main.cpp.o.provides.build: CMakeFiles/ep.dir/main.cpp.o
 
 CMakeFiles/ep.dir/scrInteractor.cpp.o: CMakeFiles/ep.dir/flags.make
 CMakeFiles/ep.dir/scrInteractor.cpp.o: scrInteractor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus/Documents/mvga/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ep.dir/scrInteractor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ep.dir/scrInteractor.cpp.o -c /home/matheus/Documents/mvga/scrInteractor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus/EDUARRDO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ep.dir/scrInteractor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ep.dir/scrInteractor.cpp.o -c /home/matheus/EDUARRDO/scrInteractor.cpp
 
 CMakeFiles/ep.dir/scrInteractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ep.dir/scrInteractor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus/Documents/mvga/scrInteractor.cpp > CMakeFiles/ep.dir/scrInteractor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus/EDUARRDO/scrInteractor.cpp > CMakeFiles/ep.dir/scrInteractor.cpp.i
 
 CMakeFiles/ep.dir/scrInteractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ep.dir/scrInteractor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus/Documents/mvga/scrInteractor.cpp -o CMakeFiles/ep.dir/scrInteractor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus/EDUARRDO/scrInteractor.cpp -o CMakeFiles/ep.dir/scrInteractor.cpp.s
 
 CMakeFiles/ep.dir/scrInteractor.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ep.dir/scrInteractor.cpp.o.provides.build: CMakeFiles/ep.dir/scrInter
 
 CMakeFiles/ep.dir/TrackBall.cpp.o: CMakeFiles/ep.dir/flags.make
 CMakeFiles/ep.dir/TrackBall.cpp.o: TrackBall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus/Documents/mvga/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ep.dir/TrackBall.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ep.dir/TrackBall.cpp.o -c /home/matheus/Documents/mvga/TrackBall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus/EDUARRDO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ep.dir/TrackBall.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ep.dir/TrackBall.cpp.o -c /home/matheus/EDUARRDO/TrackBall.cpp
 
 CMakeFiles/ep.dir/TrackBall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ep.dir/TrackBall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus/Documents/mvga/TrackBall.cpp > CMakeFiles/ep.dir/TrackBall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus/EDUARRDO/TrackBall.cpp > CMakeFiles/ep.dir/TrackBall.cpp.i
 
 CMakeFiles/ep.dir/TrackBall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ep.dir/TrackBall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus/Documents/mvga/TrackBall.cpp -o CMakeFiles/ep.dir/TrackBall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus/EDUARRDO/TrackBall.cpp -o CMakeFiles/ep.dir/TrackBall.cpp.s
 
 CMakeFiles/ep.dir/TrackBall.cpp.o.requires:
 
@@ -148,7 +148,7 @@ ep: /usr/lib/x86_64-linux-gnu/libglut.so
 ep: /usr/lib/x86_64-linux-gnu/libXmu.so
 ep: /usr/lib/x86_64-linux-gnu/libXi.so
 ep: CMakeFiles/ep.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheus/Documents/mvga/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ep"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheus/EDUARRDO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ep"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ep.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -167,6 +167,6 @@ CMakeFiles/ep.dir/clean:
 .PHONY : CMakeFiles/ep.dir/clean
 
 CMakeFiles/ep.dir/depend:
-	cd /home/matheus/Documents/mvga && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matheus/Documents/mvga /home/matheus/Documents/mvga /home/matheus/Documents/mvga /home/matheus/Documents/mvga /home/matheus/Documents/mvga/CMakeFiles/ep.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/matheus/EDUARRDO && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matheus/EDUARRDO /home/matheus/EDUARRDO /home/matheus/EDUARRDO /home/matheus/EDUARRDO /home/matheus/EDUARRDO/CMakeFiles/ep.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ep.dir/depend
 

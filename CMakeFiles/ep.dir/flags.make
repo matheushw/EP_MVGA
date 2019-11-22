@@ -6,5 +6,5 @@ CXX_FLAGS =  -lGL -lGLU -lglut -lGLEW -L /usr/lib/nvidia-331/
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/matheus/Documents/mvga/VisOf -I/home/matheus/Documents/mvga/VisOf/Utils -I/home/matheus/Documents/mvga/VisOf/iterFunc -I/home/matheus/Documents/mvga/of 
+CXX_INCLUDES = -I/home/matheus/EDUARRDO/VisOf -I/home/matheus/EDUARRDO/VisOf/Utils -I/home/matheus/EDUARRDO/VisOf/iterFunc -I/home/matheus/EDUARRDO/of 
 

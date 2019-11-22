@@ -2,6 +2,7 @@
 #define OFCELL_H
 #include "ofMacros.h"
 #include "ofBase.h"
+
 namespace of
 {
 #define IDS typename ofCell<size,_Traits>::ids

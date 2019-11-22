@@ -2,12 +2,11 @@
 #include <stdio.h>
 #include <iostream>
 
-
-
 using namespace std;
 
 bool scrInteractor::Normal_Change = 0;
-float* scrInteractor::Centroide = new float[3];;
+float* scrInteractor::Centroide = new float[3];
+
 
 /*====================== glButton ===================================*/
 
@@ -239,6 +238,8 @@ void scrInteractor::MouseMotion(int x, int y) /* é acessada com o movimento do 
 /*===================================================================*/
 void scrInteractor::Mouse(int button, int state, int x, int y) /* coordena */
 {
+	auxPoint<int> point_screen;
+	double point_world[3];
 	int mod_keys;
 	static char names[3] = {'X', 'Y', 'Z'};
 //	static float wz;
@@ -294,6 +295,10 @@ void scrInteractor::Mouse(int button, int state, int x, int y) /* coordena */
 		}
 	
 		glutPostRedisplay();
+		point_screen.setValues((int)x, (int)y);
+		this->ScreenToPoint(point_screen, point_world);
+		std::cout<<"X: "<<x<<" Y: "<<y<<"\n";
+		std::cout<<"X2: "<<point_world[0]<<" Y2: "<<point_world[1]<<"\n";
 	}
 	else
 	{
@@ -303,7 +308,6 @@ void scrInteractor::Mouse(int button, int state, int x, int y) /* coordena */
 		if (button == GLUT_RIGHT_BUTTON)
 			mouse_right = false;
 	}
-
 }
 
 /*===================================================================*/
@@ -782,6 +786,8 @@ void scrInteractor::setLights(bool lights_on) /* habilita ou não o uso da ilumi
 		glDisable(GL_LIGHTING);
 
 }
+
+//352 B
 
 /*===================================================================*/
 void scrInteractor::ScreenToPoint(auxPoint<int> mouse, double point[3])

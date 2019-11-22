@@ -8,6 +8,7 @@
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 #include <time.h>
+#include "globalvar.h"
 //#include <functional>
 
 #include "of.h"
@@ -25,8 +26,6 @@
 
 #include "ofVertexStarIteratorSurfaceVertex.h"
 
-
-// #include "scrInteractor.h"
 
 clock_t start_insert;
 clock_t end_insert;
@@ -57,93 +56,57 @@ typedef CommandComponent TAllCommands;
 ofVtkWriter<TTraits> writer;
 TAllCommands *allCommands;
 
+//##################################################################//
+
+////////////////////////////////////////////////////////////////////////
 int type = 3;
-double coords[3];
-int atual;
-int p;
+//CASO 1 EXECUTA CRUST
+//CASO 2 EXECUTA BETA-SKELETON
+//CASO 3 EXECUTA ARVORE
+////////////////////////////////////////////////////////////////////////
 
 void RenderScene(void){ 
 	allCommands->Execute();
 	Print->Vertices(malha,blue,3);
 	Print->FacesWireframe(malha,grey,3);
-	//////////////////////////////////////////
-	double primeiro[2];
-	double segundo[2];
-	double terceiro[2];
-	double d, dx, dy, dz;
-	atual = 0; // mudar para mudar o triangulo inicial
-	do {
-		Print->Face(atual, red);
-		// primeiro vertice
-		primeiro[0] = malha->getVertex(malha->getCell(atual)->getVertexId(0))->getCoord(0);
-		primeiro[1] = malha->getVertex(malha->getCell(atual)->getVertexId(0))->getCoord(1);
-
-		// segundo vertice
-		segundo[0] = malha->getVertex(malha->getCell(atual)->getVertexId(1))->getCoord(0);
-		segundo[1] = malha->getVertex(malha->getCell(atual)->getVertexId(1))->getCoord(1);
-
-		// terceiro vertice
-		terceiro[0] = malha->getVertex(malha->getCell(atual)->getVertexId(2))->getCoord(0);
-		terceiro[1] = malha->getVertex(malha->getCell(atual)->getVertexId(2))->getCoord(1);
-
-		d = (segundo[0]*terceiro[1]) + (terceiro[0]*primeiro[1]) + (primeiro[0]*segundo[1]) - (primeiro[1]*segundo[0]) - (segundo[1]*terceiro[0]) - (terceiro[1]*primeiro[0]);
-
-		dx = (segundo[0]*terceiro[1]) + (terceiro[0]*coords[1]) + (coords[0]*segundo[1]) - (coords[1]*segundo[0]) - (segundo[1]*terceiro[0]) - (terceiro[1]*coords[0]);
-
-		dy = (coords[0]*terceiro[1]) + (terceiro[0]*primeiro[1]) + (primeiro[0]*coords[1]) - (primeiro[1]*coords[0]) - (coords[1]*terceiro[0]) - (terceiro[1]*primeiro[0]);
-
-		dz =  (segundo[0]*coords[1]) + (coords[0]*primeiro[1]) + (primeiro[0]*segundo[1]) - (primeiro[1]*segundo[0]) - (segundo[1]*coords[0]) - (coords[1]*primeiro[0]);
-
-		int x = dx/d;
-		int y = dy/d;
-		int z = dz/d;
-
-		if (x>0 && y>0 && z>0) break;
-
-		if (x<y && x<z) {
-			atual = malha->getCell(atual)->getMateId(0);
-			continue;
-		}
-		if(y<x && y<z) {
-			atual = malha->getCell(atual)->getMateId(1);
-			continue;
-		}
-		if(z<x && z<y) {
-			atual = malha->getCell(atual)->getMateId(2);
-			continue;
-		}
-		if (x==y || x==z) {
-			atual = malha->getCell(atual)->getMateId(0);
-			continue;
-		}
-		atual = malha->getCell(atual)->getMateId(1);
-
-		if(atual == -1) break;
-
-	} while(true);
-
+	// Print->Face(malha->getCell(0),red);
+	// Print->Face(malha->getCell(malha->getCell(0)->getMateId(0)),blue);	
 	glFinish();
 	glutSwapBuffers();
 }
 
 void HandleKeyboard(unsigned char key, int x, int y){	
+	
+	
+	
+	double coords[3];
 	char *xs[10];
 	allCommands->Keyboard(key);
 	
 	switch (key) {
+
 		case 'e':
 			exit(1);
 		break;
 		case 'v':
 			coords[0]=x;
-			coords[1]=y;
+			coords[1]=-y;
 			coords[2]=0.0;
-			malha->delVertex(p);
-			p = malha->addVertex(coords);
-			break;
-		case 'd':
+			malha->addVertex(coords);
 		break;
+		case 's':
+			
+			
+		break;
+
+		case 'd':
+			
+			
+		break;
+	
+
 	}
+    
 	
 	Interactor->Refresh_List();
 	glutPostRedisplay();
@@ -152,7 +115,7 @@ void HandleKeyboard(unsigned char key, int x, int y){
 
 using namespace std;
 
-int main(int argc, char **argv)
+int main(int *argc, char **argv)
 {
 
   ofRuppert2D<MyofDefault2D> ruppert;
@@ -166,6 +129,7 @@ int main(int argc, char **argv)
     reader.readOffFile(fileBrasil);
     
     ruppert.execute2D(reader.getLv(),reader.getLids(),true);
+    //writer.write(ruppert.getMesh(),"out.vtk",reader.getNorma(),ruppert.getNumberOfInsertedVertices());
   
   meshHandler = ruppert.getMesh();
   malha = ruppert.getMesh();
@@ -203,7 +167,7 @@ int main(int argc, char **argv)
 	Point center((x1+x2)/2.0, (y1+y2)/2.0, (y1+y2)/2.0 );
 	Interactor->Init(center[0]-maxdim, center[0]+maxdim,
 					center[1]-maxdim, center[1]+maxdim,
-					center[2]-maxdim, center[2]+maxdim,&argc,argv);
+					center[2]-maxdim, center[2]+maxdim,argc,argv);
 
 	
 	

@@ -10,6 +10,7 @@ CMakeFiles/ep.dir/main.cpp.o: GL_Interactor.h
 CMakeFiles/ep.dir/main.cpp.o: Point.hpp
 CMakeFiles/ep.dir/main.cpp.o: PrintBase.hpp
 CMakeFiles/ep.dir/main.cpp.o: TrackBall.h
+CMakeFiles/ep.dir/main.cpp.o: globalvar.h
 CMakeFiles/ep.dir/main.cpp.o: main.cpp
 CMakeFiles/ep.dir/main.cpp.o: printof.hpp
 CMakeFiles/ep.dir/main.cpp.o: scrInteractor.h
